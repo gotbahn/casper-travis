@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - node # latest node.js version
+install:
+  - npm install # can be not specified, runs by default
+before_script:
+  - npm start & # start local server, '&' means use it as parallel process
+  - sleep 5 # 5s to make sure that local server have enough time to up
+script:
+  - npm test # can be not specified, runs by default
